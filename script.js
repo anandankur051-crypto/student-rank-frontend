@@ -1,4 +1,4 @@
-const BASE_URL = "http://127.0.0.1:8000";
+const BASE_URL = "https://student-rank-backend-1.onrender.com";
 
 function showTab(tabId, element) {
     document.getElementById("rankTab").classList.add("hidden");
@@ -90,3 +90,4 @@ async function getBranchRanks() {
         resultDiv.innerHTML = `<p class='error'>${error.message}</p>`;
     }
 }
+
