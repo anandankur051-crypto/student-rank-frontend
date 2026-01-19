@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Rank Lookup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Student Rank Lookup System</h1>
+
+    <div class="tabs">
+        <button class="tab active" onclick="showTab('rankTab', this)">Get My Rank</button>
+        <button class="tab" onclick="showTab('branchTab', this)">View Branch Rank List</button>
+    </div>
+
+    <!-- Get My Rank -->
+    <div id="rankTab" class="tab-content">
+        <input type="text" id="rollInput" placeholder="Enter Roll Number">
+        <br><br>
+        <button onclick="getMyRank()">Get Rank</button>
+        <div id="rankResult"></div>
+    </div>
+
+    <!-- Branch Rank List -->
+    <div id="branchTab" class="tab-content hidden">
+        <select id="branchInput">
+            <option value="">Select Branch</option>
+
+            <option value="Bio_Tech">Biotechnology</option>
+            <option value="Civil">Civil Engineering</option>
+            <option value="Computer">Computer Science</option>
+            <option value="CS_AI">CS (AI)</option>
+            <option value="CS_with_Data_Science">CS (Data Science)</option>
+            <option value="MAC">Mathematics & Computing</option>
+            <option value="CS_with_Big_Data">CS (Big Data)</option>
+            <option value="CS_IOT">CS (IoT)</option>
+
+            <option value="Electrical">Electrical Engineering</option>
+            <option value="Electronics_and_Communication">
+                Electronics & Communication
+            </option>
+            <option value="EIOT">EIOT</option>
+            <option value="ECE_VLSI">ECE (VLSI)</option>
+            <option value="ECAM_AI_ML">ECAM (AI / ML)</option>
+
+            <option value="Information_Technology">
+                Information Technology
+            </option>
+            <option value="ITNS">ITNS</option>
+            <option value="ICE">ICE</option>
+
+            <option value="Mechanical">Mechanical Engineering</option>
+            <option value="Mechanical_Electric_Vehicles">
+                Mechanical (Electric Vehicles)
+            </option>
+        </select>
+
+        <br><br>
+        <button onclick="getBranchRanks()">View List</button>
+        <div id="branchResult"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
